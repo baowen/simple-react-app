@@ -17,29 +17,22 @@ class Music extends React.Component {
   }
 
   fetchArtists = function(){
-    fetch('http://localhost:3000/artist', {
-      mode: 'no-cors'
-    })
-    .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-    .catch(error => console.error(error));
 
-    // fetch('http://localhost:3000/artist', {
-    //   mode: 'no-cors'
-    // })
-    // .then(res => res.json())
-    // .then(artists => {
-    //   console.log(artists);
-    //   this.setState({
-    //     artists
-    //   })
-    // })
-    // .catch(err => {
-    //   console.log(err);
-    //   this.setState({
-    //     artists: [],
-    //     error: err
-    //   })
-    // });
+    fetch('/artist')
+    .then(res => res.json())
+    .then(artists => {
+      console.log(artists);
+      this.setState({
+        artists
+      })
+    })
+    .catch(err => {
+      console.log(err);
+      this.setState({
+        artists: [],
+        error: err
+      })
+    });
   }
 
   render() {
