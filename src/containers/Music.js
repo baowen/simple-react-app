@@ -1,5 +1,5 @@
 import React from 'react';
-import Artists from '../components/Artists';
+import ArtistsList from '../components/ArtistsList';
 
 
 class Music extends React.Component {
@@ -37,9 +37,9 @@ class Music extends React.Component {
 
   render() {
       return (
-          <div >
+          <div className="container">
             <h1>Music Database</h1>
-            <Artists artists={this.state.artists}  />
+            <ArtistsList artists={this.state.artists}  />
           </div>
       );
   }
