@@ -6,7 +6,7 @@ export default class ArtistsList extends React.Component {
     let artists = this.props.artists.map(artist => <Artist key={artist.artist_id} {...artist} />)
     return (
       <div>
-        <ul className="collection">
+        <ul className="collapsible collapsible-accordion">
           {artists}
         </ul>
       </div>

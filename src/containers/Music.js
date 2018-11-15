@@ -37,7 +37,7 @@ class Music extends React.Component {
 
   render() {
       return (
-          <div className="container">
+          <div >
             <h1>Music Database</h1>
             <ArtistsList artists={this.state.artists}  />
           </div>
